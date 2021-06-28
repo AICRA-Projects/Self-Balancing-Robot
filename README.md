@@ -40,4 +40,4 @@ For more info, see https://www.arduino.cc/en/Guide/Libraries
 
 ## How Does Robot Balancing Work?
 The MPU-6050 uses I2C to communicate with the micro-controller, I2C pins in Arduino are need to connect up the pins as shown in the schematics: the SDA line connects to the Analog pin 4, the SCL to Analog pin 5, power input to the 3.3v pin and the ground to the GND pin. If you are using one of the newer Arduinos, you could also connect the sensor to the dedicated SDA and SCL header pins
-![image](https://drive.google.com/drive/u/0/folders/1BPJz1VKOvCc58l32truyXEcl1X7LZRwy)
+![image]()
