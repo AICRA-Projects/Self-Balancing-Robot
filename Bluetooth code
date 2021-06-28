@@ -1,0 +1,29 @@
+/*
+@author: Sumit chatterjee
+@email id: csumit249@gmail.com
+*/
+
+#include <SoftwareSerial.h>
+SoftwareSerial mySerial(3, 2); // RX, TX
+char data;
+void setup()
+{
+  // Open serial communications and wait for port to open:
+  Serial.begin(115200);
+  while (!Serial) {
+    ; // wait for serial port to connect. Needed for Native USB only
+  }
+
+  // set the data rate for the SoftwareSerial port
+  mySerial.begin(9600);
+}
+
+void loop() // run over and over
+{
+  if (mySerial.available()){
+    data = mySerial.read();
+    //Serial.write(data);
+    Serial.println(data);
+  }
+//Serial.println(data);
+}
