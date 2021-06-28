@@ -40,4 +40,15 @@ For more info, see https://www.arduino.cc/en/Guide/Libraries
 
 ## How Does Robot Balancing Work?
 The MPU-6050 uses I2C to communicate with the micro-controller, I2C pins in Arduino are need to connect up the pins as shown in the schematics: the SDA line connects to the Analog pin 4, the SCL to Analog pin 5, power input to the 3.3v pin and the ground to the GND pin. If you are using one of the newer Arduinos, you could also connect the sensor to the dedicated SDA and SCL header pins
-![image]()
+## Self-balancing Manual Tunning 
+* In control theory, keeping some variable (in this case, the position of the robot) steady needs a special controller called a PID (proportional integral derivative). Each of these parameters has "gains", normally called Kp, Ki, and Kd. PID provides correction between the desired value (or input) and the actual value (or output). The difference between the input and the output is called "error". The PID controller reduces the error to the smallest value possible by continually adjusting the output. In our Arduino self-balancing robot, the input (which is the desired tilt, in degrees) is set by software. The MPU6050 reads the current tilt of the robot and feeds it to the PID algorithm, which performs calculations to control the motor and keep the robot in the upright position. PID requires that the gains Kp, Ki, and Kd values be "tuned" to optimal values. Engineers use software like MATLAB to compute these values automatically. Unfortunately, we can't use MATLAB in our case because it would further complicate the project. We will tune the PID values manually instead. Here's how to do this:
+* Make Kp, Ki, and Kd equal to zero.
+* Adjust Kp. Too little Kp will make the robot fall over, because there's not enough correction. Too much Kp will make the robot go back and forth wildly. A good enough Kp will make the robot go slightly back and forth (or oscillate a little).
+* Once the Kp is set, adjust Kd. A good Kd value will lessen the oscillations until the robot is almost steady. Also, the right amount of Kd will keep the robot standing, even if pushed.
+* Lastly, set the Ki. The robot will oscillate when turned on, even if the Kp and Kd are set, but will stabilize in time. The correct Ki value will shorten the time it takes for the robot to stabilize.
+## Reference 
+* http://shukra.cedt.iisc.ernet.in/edwiki/File:Physics.jpg
+* https://maker.pro/arduino/projects/build-arduino-self-balancing-robot
+* https://wired.chillibasket.com/2014/10/accel-gyro-sensors/
+* https://en.wikipedia.org/wiki/Inverted_pendulum#:~:text=An%20inverted%20pendulum%20is%20a,additional%20help%20will%20fall%20over.&text=The%20inverted%20pendulum%20is%20a,benchmark%20for%20testing%20control%20strategies.
+
