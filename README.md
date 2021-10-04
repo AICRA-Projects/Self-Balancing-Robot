@@ -1,6 +1,16 @@
 # Self-Balancing-Robot
 This Project introduces a two-wheeled self-balancing mobile robot based on a control moment gyroscope module. Two-wheeled mobile robots are able to achieve better mobility and rotation in small spaces and to move faster than legged robots such as humanoid type robots. For this reason, the two-wheeled mobile robot is generally used as a mobile robot platform. However, to maintain its balance, the two-wheeled robot needs to use movements of its two wheels. When an unexpected disturbance affects the robot, the robot maintains its balance with movements of the wheels and tilting of the body. If the disturbance exceeds the response capability of the robot, the robot will lose its stability. At the same time, the safety of the robot may be put at risk by movements to maintain balance. To address these issues, a robot was designed with a control moment gyroscope module to improve balance while minimizing movement. When a disturbance is applied to the robot, the disturbance is estimated by a disturbance observer and the control moment gyroscope controller compensates the disturbance. Using the control moment gyroscope module, the robot can maintain balance with just small movements of its wheels. Improved performance and stability were verified with experiments and simulations.
-# Resources
+## how to operate 
+### step 1:  "ON" the robot by Connecting male Black jack (upper) with Female black holder is downward
+### step 2:  Keep on Stable base or ground and wait for 10 seconds sensor will calibrate
+### step 3:  make it stand with human help for intial balancing point 
+### step 4:  Bluetooth connectivity has been defined with application (Scan the QR )
+### step 5:  Connect your bluetooth with the name of HC-05
+### step 6:  Goto your application and click on setting option 
+### step 7:  In setting option menu is defined with "connect to car" and Red will turn into green  
+https://play.google.com/store/apps/details?id=braulio.calle.bluetoothRCcontroller
+
+## Resources
 Material Required for the Projects 
 ## Hardwares 
 * Arduino Uno R3
@@ -50,5 +60,5 @@ The MPU-6050 uses I2C to communicate with the micro-controller, I2C pins in Ardu
 * http://shukra.cedt.iisc.ernet.in/edwiki/File:Physics.jpg
 * https://maker.pro/arduino/projects/build-arduino-self-balancing-robot
 * https://wired.chillibasket.com/2014/10/accel-gyro-sensors/
-* https://en.wikipedia.org/wiki/Inverted_pendulum#:~:text=An%20inverted%20pendulum%20is%20a,additional%20help%20will%20fall%20over.&text=The%20inverted%20pendulum%20is%20a,benchmark%20for%20testing%20control%20strategies.
+*        https://en.wikipedia.org/wiki/Inverted_pendulum#:~:text=An%20inverted%20pendulum%20is%20a,additional%20help%20will%20fall%20over.&text=The%20inverted%20pendulum%20is%20a,benchmark%20for%20testing%20control%20strategies.
 
