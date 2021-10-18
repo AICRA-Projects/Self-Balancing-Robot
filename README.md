@@ -10,6 +10,10 @@ This Project introduces a two-wheeled self-balancing mobile robot based on a con
 ### step 7:  In setting option menu is defined with "connect to car" and Red will turn into green  
 https://play.google.com/store/apps/details?id=braulio.calle.bluetoothRCcontroller
 
+## Circuit Diagram 
+![self balancing](https://user-images.githubusercontent.com/42414598/137737623-da3bc339-cce7-48e5-b398-441130cddab5.png)
+
+
 ## Resources
 Material Required for the Projects 
 ## Hardwares 
